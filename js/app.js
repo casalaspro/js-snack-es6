@@ -40,8 +40,9 @@ console.log("JavaScript Snacks")
 
 const vipTable = ['Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 'Chiara Ferragni', 'Fedez', 'George Clooney', 'Amal Clooney', 'Maneskin'];
 
-const typographyVipTable = [];
+// const typographyVipTable = [];
 
+// EASY WAY
 // vipTable.forEach((el, i)=>{
 //   const personVip = {
 //     tableName : 'Tavolo VIP',
@@ -54,16 +55,31 @@ const typographyVipTable = [];
 //   console.log(typographyVipTable[i])
 // })
 
-vipTable.forEach((el, i)=>{
-  const personVip = new Map();
-  personVip.set("tableName", 'Tavolo VIP');
-  personVip.set("guestName", el);
-  personVip.set("place", i+1);
+// MAP WAY
+// vipTable.forEach((el, i)=>{
+//   const personVip = new Map();
+//   personVip.set("tableName", 'Tavolo VIP');
+//   personVip.set("guestName", el);
+//   personVip.set("place", i+1);
 
-  typographyVipTable.push(personVip);
-})
+//   typographyVipTable.push(personVip);
+// })
+
+// ARRAY MAP METHOD
+const typographyVipTable = vipTable.map((el, i)=>{
+  const vip = {
+    tableName : 'Tavolo VIP',
+    guestName : el,
+    place: i+1
+  }
+
+  return vip;
+});
 
 console.log(typographyVipTable);
+
+
+
 
 // SNACK 2
 
