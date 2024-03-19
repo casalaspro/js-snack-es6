@@ -66,7 +66,7 @@ function createStudent(id, name, grade){
   const student = {
     id: id,
     name: name,
-    grade: grade
+    grades: grade
   }
 
   return student;
@@ -83,9 +83,25 @@ studentsChart.push(createStudent(102, "Francesca da Polenta", 84));
 console.log(studentsChart);
 
 studentsChart.forEach((el)=>{
-  const student = el;
-  console.log(student["name"].toUpperCase());
+  const studentCapitalized = createStudent(el["id"], el["name"].toUpperCase(), el["grades"]);
+  capitalizedNames.push(studentCapitalized);
+
+  if(el["grades"] > 70){
+    const studentGradeSelected = createStudent(el["id"], el["name"], el["grades"]);
+    gradeSelection.push(studentGradeSelected);
+    // console.log("Trovato VOTO");
+  }if(el["grades"] > 70 && el["id"] > 120){
+    const studentGradeIdSelected = createStudent(el["id"], el["name"], el["grades"]);
+    gradeIdSelection.push(studentGradeIdSelected);
+    // console.log("Trovato VOTO e ID");
+  }
+
+  // console.log(student["name"].toUpperCase());
 })
+
+console.log(capitalizedNames);
+console.log(gradeSelection);
+console.log(gradeIdSelection);
 
 
 
