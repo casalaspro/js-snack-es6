@@ -56,3 +56,49 @@ vipTable.forEach((el, i)=>{
 
 // SNACK 2
 
+const capitalizedNames = [];
+const gradeSelection = [];
+const gradeIdSelection = [];
+
+const studentsChart = [];
+
+function createStudent(id, name, grade){
+  const student = {
+    id: id,
+    name: name,
+    grade: grade
+  }
+
+  return student;
+}
+
+/*
+
+Id   Name                    Grades
+213  Marco della Rovere       78
+110  Paola Cortellessa        96
+250  Andrea Mantegna 	        48
+145  Gaia Borromini           74
+196  Luigi Grimaldello 	      68
+102  Piero della Francesca    50
+120  Francesca da Polenta     84
+
+*/
+
+studentsChart.push(createStudent(213, "Marco della Rovere", 78));
+studentsChart.push(createStudent(110, "Paola Cortellessa", 96));
+studentsChart.push(createStudent(250, "Andrea Mantegna", 48));
+studentsChart.push(createStudent(145, "Gaia Borromini", 74));
+studentsChart.push(createStudent(196, "Luigi Grimaldello", 68));
+studentsChart.push(createStudent(213, "Piero della Francesca", 50));
+studentsChart.push(createStudent(102, "Francesca da Polenta", 84));
+
+console.log(studentsChart);
+
+studentsChart.forEach((el)=>{
+  const student = el;
+  console.log(student["name"].toUpperCase());
+})
+
+
+
