@@ -31,9 +31,28 @@ Id   Name                    Grades
 102  Piero della Francesca    50
 120  Francesca da Polenta     84
 
-
 */
 
-
-
 console.log("JavaScript Snacks")
+
+
+// SNACK 1
+
+const vipTable = ['Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 'Chiara Ferragni', 'Fedez', 'George Clooney', 'Amal Clooney', 'Maneskin'];
+
+const typographyVipTable = [];
+
+vipTable.forEach((el, i)=>{
+  const personVip = {
+    tableName : 'Tavolo VIP',
+    guestName : el,
+    place: i+1,
+  }
+
+  typographyVipTable.push(personVip);
+
+  console.log(typographyVipTable[i])
+})
+
+// SNACK 2
+
