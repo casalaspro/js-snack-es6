@@ -42,17 +42,28 @@ const vipTable = ['Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 
 
 const typographyVipTable = [];
 
+// vipTable.forEach((el, i)=>{
+//   const personVip = {
+//     tableName : 'Tavolo VIP',
+//     guestName : el,
+//     place: i+1,
+//   }
+
+//   typographyVipTable.push(personVip);
+
+//   console.log(typographyVipTable[i])
+// })
+
 vipTable.forEach((el, i)=>{
-  const personVip = {
-    tableName : 'Tavolo VIP',
-    guestName : el,
-    place: i+1,
-  }
+  const personVip = new Map();
+  personVip.set("tableName", 'Tavolo VIP');
+  personVip.set("guestName", el);
+  personVip.set("place", i+1);
 
   typographyVipTable.push(personVip);
-
-  console.log(typographyVipTable[i])
 })
+
+console.log(typographyVipTable);
 
 // SNACK 2
 
