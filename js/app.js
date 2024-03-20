@@ -239,4 +239,36 @@ teams.forEach((el, i)=>{
 
 console.log(teamsNomeFalli);
 
+const linkPictures = [
+  "./img/salernitana.jpeg",
+  "./img/torino.png",
+  "./img/genoa.png",
+  "./img/parma.png",
+  "./img/milan.png",
+  "./img/inter.png",
+  "./img/caltanissetta.jpeg"
+];
+
+teamsNomeFalli.forEach((el, index)=>{
+  el["link"] = linkPictures[index];
+})
+
+console.log(teamsNomeFalli);
+
+const containerElement = document.querySelector(".teams-cards");
+
+teamsNomeFalli.forEach((el)=>{
+  containerElement.innerHTML += `
+    <div class="col-3">
+      <div class="card">
+        <img src=${el["link"]} class="card-img-top" alt="...">
+        <div class="card-body">
+          <h4 class="card-title">${el["nome"]}</h4>
+          <p>Falli subiti: ${el["falli_subiti"]}</p>
+        </div>
+      </div>
+    </div>
+  `
+})
+
 
