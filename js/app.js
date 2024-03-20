@@ -216,6 +216,17 @@ teams.push(generateTeam("Inter"));
 teams.push(generateTeam("Caltanissetta"));
 console.log(teams);
 
+function generateRandomNumber(min, max) {
+  const minCeiled = Math.ceil(min);
+  const maxFloored = Math.floor(max);
+  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+}
 
+teams.forEach((el, index, object)=>{
+  object[index]["falli_subiti"] = generateRandomNumber(1, 100);
+  object[index]["punti_fatti"] = generateRandomNumber(1, 100);
+})
+
+console.log(teams);
 
 
