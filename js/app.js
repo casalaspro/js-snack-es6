@@ -36,99 +36,99 @@ Id   Name                    Grades
 console.log("JavaScript Snacks")
 
 
-// SNACK 1
+// // SNACK 1
 
-const vipTable = ['Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 'Chiara Ferragni', 'Fedez', 'George Clooney', 'Amal Clooney', 'Maneskin'];
+// const vipTable = ['Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 'Chiara Ferragni', 'Fedez', 'George Clooney', 'Amal Clooney', 'Maneskin'];
 
-// const typographyVipTable = [];
+// // const typographyVipTable = [];
 
-// EASY WAY
-// vipTable.forEach((el, i)=>{
-//   const personVip = {
+// // EASY WAY
+// // vipTable.forEach((el, i)=>{
+// //   const personVip = {
+// //     tableName : 'Tavolo VIP',
+// //     guestName : el,
+// //     place: i+1,
+// //   }
+
+// //   typographyVipTable.push(personVip);
+
+// //   console.log(typographyVipTable[i])
+// // })
+
+// // MAP WAY
+// // vipTable.forEach((el, i)=>{
+// //   const personVip = new Map();
+// //   personVip.set("tableName", 'Tavolo VIP');
+// //   personVip.set("guestName", el);
+// //   personVip.set("place", i+1);
+
+// //   typographyVipTable.push(personVip);
+// // })
+
+// // ARRAY MAP METHOD
+// const typographyVipTable = vipTable.map((el, i)=>{
+//   const vip = {
 //     tableName : 'Tavolo VIP',
 //     guestName : el,
-//     place: i+1,
+//     place: i+1
 //   }
 
-//   typographyVipTable.push(personVip);
+//   return vip;
+// });
 
-//   console.log(typographyVipTable[i])
+// console.log(typographyVipTable);
+
+
+
+
+// // SNACK 2
+
+// const capitalizedNames = [];
+// const gradeSelection = [];
+// const gradeIdSelection = [];
+
+// const studentsChart = [];
+
+// function createStudent(id, name, grade){
+//   const student = {
+//     id: id,
+//     name: name,
+//     grades: grade
+//   }
+
+//   return student;
+// }
+
+// studentsChart.push(createStudent(213, "Marco della Rovere", 78));
+// studentsChart.push(createStudent(110, "Paola Cortellessa", 96));
+// studentsChart.push(createStudent(250, "Andrea Mantegna", 48));
+// studentsChart.push(createStudent(145, "Gaia Borromini", 74));
+// studentsChart.push(createStudent(196, "Luigi Grimaldello", 68));
+// studentsChart.push(createStudent(213, "Piero della Francesca", 50));
+// studentsChart.push(createStudent(102, "Francesca da Polenta", 84));
+
+// console.log(studentsChart);
+
+// studentsChart.forEach((el)=>{
+//   const studentCapitalized = createStudent(el["id"], el["name"].toUpperCase(), el["grades"]);
+//   capitalizedNames.push(studentCapitalized);
+
+//   if(el["grades"] > 70){
+//     const studentGradeSelected = createStudent(el["id"], el["name"], el["grades"]);
+//     gradeSelection.push(studentGradeSelected);
+//     // console.log("Trovato VOTO");
+//   }if(el["grades"] > 70 && el["id"] > 120){
+//     const studentGradeIdSelected = createStudent(el["id"], el["name"], el["grades"]);
+//     gradeIdSelection.push(studentGradeIdSelected);
+//     // console.log("Trovato VOTO e ID");
+//   }
+
+//   // console.log(student["name"].toUpperCase());
 // })
 
-// MAP WAY
-// vipTable.forEach((el, i)=>{
-//   const personVip = new Map();
-//   personVip.set("tableName", 'Tavolo VIP');
-//   personVip.set("guestName", el);
-//   personVip.set("place", i+1);
-
-//   typographyVipTable.push(personVip);
-// })
-
-// ARRAY MAP METHOD
-const typographyVipTable = vipTable.map((el, i)=>{
-  const vip = {
-    tableName : 'Tavolo VIP',
-    guestName : el,
-    place: i+1
-  }
-
-  return vip;
-});
-
-console.log(typographyVipTable);
-
-
-
-
-// SNACK 2
-
-const capitalizedNames = [];
-const gradeSelection = [];
-const gradeIdSelection = [];
-
-const studentsChart = [];
-
-function createStudent(id, name, grade){
-  const student = {
-    id: id,
-    name: name,
-    grades: grade
-  }
-
-  return student;
-}
-
-studentsChart.push(createStudent(213, "Marco della Rovere", 78));
-studentsChart.push(createStudent(110, "Paola Cortellessa", 96));
-studentsChart.push(createStudent(250, "Andrea Mantegna", 48));
-studentsChart.push(createStudent(145, "Gaia Borromini", 74));
-studentsChart.push(createStudent(196, "Luigi Grimaldello", 68));
-studentsChart.push(createStudent(213, "Piero della Francesca", 50));
-studentsChart.push(createStudent(102, "Francesca da Polenta", 84));
-
-console.log(studentsChart);
-
-studentsChart.forEach((el)=>{
-  const studentCapitalized = createStudent(el["id"], el["name"].toUpperCase(), el["grades"]);
-  capitalizedNames.push(studentCapitalized);
-
-  if(el["grades"] > 70){
-    const studentGradeSelected = createStudent(el["id"], el["name"], el["grades"]);
-    gradeSelection.push(studentGradeSelected);
-    // console.log("Trovato VOTO");
-  }if(el["grades"] > 70 && el["id"] > 120){
-    const studentGradeIdSelected = createStudent(el["id"], el["name"], el["grades"]);
-    gradeIdSelection.push(studentGradeIdSelected);
-    // console.log("Trovato VOTO e ID");
-  }
-
-  // console.log(student["name"].toUpperCase());
-})
-
-console.log(capitalizedNames);
-console.log(gradeSelection);
-console.log(gradeIdSelection);
+// console.log(capitalizedNames);
+// console.log(gradeSelection);
+// console.log(gradeIdSelection);
 
 /*
 
@@ -147,6 +147,7 @@ Stampare in pagina oltre che in console!
 
 */
 
+// creo array di oggetti bici con name e weight come proprietà
 const bikes = [
   {
     name: "Bianchi Specialissima",
@@ -169,5 +170,27 @@ const bikes = [
     weight: 6.2
   },
 ];
+
+// destrutturo il primo oggetto
+const {name: nameFirst, weight: weightFirst} = bikes[0];
+
+// attribuisco ad una variabile il primo oggetto
+let lighterBike = {nameFirst, weightFirst};
+
+// ciclo tutti gli oggetti destrutturandoli e confrontandoli con la variabile lighterBike
+bikes.forEach((el, index)=>{
+  // destrutturo l'oggetto dell'array ciclato
+  const {name, weight} = bikes[index];
+  // confronto il peso
+  if(weight < lighterBike["weightFirst"]){
+    // riassegno i valori nel caso soddisfino le premesse
+    lighterBike["weightFirst"] = weight;
+    lighterBike["nameFirst"] = name;
+  }
+})
+
+console.log(lighterBike);
+
+
 
 
