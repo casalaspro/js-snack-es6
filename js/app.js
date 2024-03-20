@@ -147,6 +147,8 @@ Stampare in pagina oltre che in console!
 
 */
 
+// SNACK 3
+
 // creo array di oggetti bici con name e weight come proprietà
 const bikes = [
   {
@@ -190,6 +192,29 @@ bikes.forEach((el, index)=>{
 })
 
 console.log(lighterBike);
+
+// SNACK 4
+
+const teams = [];
+
+function generateTeam(name){
+  const team = {
+    nome: name,
+    punti_fatti: 0,
+    falli_subiti: 0,
+  }
+
+  return team
+}
+
+teams.push(generateTeam("Salernitana"));
+teams.push(generateTeam("Torino"));
+teams.push(generateTeam("Genoa"));
+teams.push(generateTeam("Parma"));
+teams.push(generateTeam("Milan"));
+teams.push(generateTeam("Inter"));
+teams.push(generateTeam("Caltanissetta"));
+console.log(teams);
 
 
 
