@@ -229,4 +229,14 @@ teams.forEach((el, index, object)=>{
 
 console.log(teams);
 
+const teamsNomeFalli = [];
+
+teams.forEach((el, i)=>{
+  const {nome, falli_subiti} = el;
+  const teamNomeFalli = {nome, falli_subiti};
+  teamsNomeFalli.push(teamNomeFalli);
+})
+
+console.log(teamsNomeFalli);
+
 
