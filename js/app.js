@@ -191,7 +191,7 @@ bikes.forEach((el, index)=>{
   }
 })
 
-console.log(lighterBike);
+console.log(`La bici che pesa meno è la ${lighterBike["nameFirst"]} ed il suo peso è di ${lighterBike["weightFirst"]}kg`);
 
 // SNACK 4
 
